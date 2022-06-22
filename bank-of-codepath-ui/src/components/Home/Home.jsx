@@ -53,12 +53,10 @@ export default function Home({transactions,setTransactions,transfers,setTransfer
 
 filteredTransactions=filterTransactions(transactions)
 
-export default function Home() {
   return (
     <div className="home">
-      <AddTransaction />
-      <BankActivity />
       <AddTransaction/>
+      {isLoading? <h1 className="loading-text"> ...loading</h1>:  <BankActivity transactions ={filteredTransactions}/> }
 
     </div>
 
