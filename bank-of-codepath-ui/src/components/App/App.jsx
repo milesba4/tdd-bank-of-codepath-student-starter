@@ -15,6 +15,7 @@ const [filterInputValue, setfilterInputValue] = React.useState("")
     <div className="app">
       <BrowserRouter>
       <Routes>
+        <Route path="/" element = {<Home/>} />
       </Routes>
       <Navbar />
       <main><Home/></main>
