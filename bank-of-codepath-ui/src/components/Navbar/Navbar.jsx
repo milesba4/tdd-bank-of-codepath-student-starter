@@ -4,9 +4,12 @@ import codepath from "../../assets/codepath.svg"
 import avatar from "../../assets/avatar.png"
 import "./Navbar.css"
 
-export default function Navbar() {
+export default function Navbar({}) {
   return (
+  
+
     <nav className="navbar">
+      <Logo/>
       <a className="logo">Logo</a>
 
       <div className="search">
