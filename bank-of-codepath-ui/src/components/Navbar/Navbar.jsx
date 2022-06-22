@@ -2,6 +2,7 @@ import * as React from "react"
 import FilterInput from "../FilterInput/FilterInput"
 import codepath from "../../assets/codepath.svg"
 import avatar from "../../assets/avatar.png"
+import { Link } from "react-router-dom";
 import "./Navbar.css"
 
 export default function Navbar({}) {
