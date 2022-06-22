@@ -36,7 +36,7 @@ export default function Navbar({}) {
 export function Logo() {
   return (
     <a className="logo">
-      <img src={codepath} alt="logo" />
+     <Link><img src={codepath} alt="logo" /></Link> 
     </a>
   )
 }
