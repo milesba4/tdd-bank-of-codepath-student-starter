@@ -10,7 +10,7 @@ const [isLoading, setisLoading] = React.useState(false)
 const [transactions,setTransactions] = React.useState([])
 const [transfers, settransfers] = React.useState([])
 const [errors,seterrors] = React.useState("")
-const [filterInputValue, setfilterInputValue] = React.useState("")
+const [filterInputValue, setFilterInputValue] = React.useState("")
   return (
     <div className="app">
       <BrowserRouter>
@@ -18,7 +18,7 @@ const [filterInputValue, setfilterInputValue] = React.useState("")
         <Route path="/" element = {<Home/>} />
         <Route path ="/tansactions/:transactionId" element = {<TransactionDetail/>}/>
       </Routes>
-      <Navbar filterInputValue={filterInputValue}/>
+      <Navbar filterInputValue={filterInputValue} setFilterInputValue={setFilterInputValue}/>
       <main><Home/></main>
       
     
