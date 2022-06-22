@@ -5,8 +5,6 @@ import avatar from "../../assets/avatar.png"
 import { Link } from "react-router-dom";
 import "./Navbar.css"
 
-export default function Navbar({filterInputValue}) {
-  // function handleOnInputChange(evt)){
 
   // }
   return (
