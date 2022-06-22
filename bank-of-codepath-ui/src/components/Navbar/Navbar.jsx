@@ -34,11 +34,9 @@ export default function Navbar({}) {
   )
 }
 
-export function Logo() {
 export function Logo({path}) {
   return (
     <a className="logo">
-     <Link><img src={codepath} alt="logo" /></Link> 
      <Link to ={path}><img src={codepath} alt="logo"/></Link> 
     </a>
   )
