@@ -6,8 +6,10 @@ import { Link } from "react-router-dom";
 import "./Navbar.css"
 
 export default function Navbar({filterInputValue, setFilterInputValue}) {
+  function handleOnInputChange(evt){
+    setFilterInputValue(evt.target.value);
 
-  // }
+  }
   return (
   
 
