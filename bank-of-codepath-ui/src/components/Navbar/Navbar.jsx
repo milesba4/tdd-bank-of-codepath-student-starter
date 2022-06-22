@@ -5,7 +5,10 @@ import avatar from "../../assets/avatar.png"
 import { Link } from "react-router-dom";
 import "./Navbar.css"
 
-export default function Navbar({FilterInputValue}) {
+export default function Navbar({filterInputValue}) {
+  // function handleOnInputChange(evt)){
+
+  // }
   return (
   
 
@@ -14,7 +17,7 @@ export default function Navbar({FilterInputValue}) {
       <a className="logo">Logo</a>
 
       <div className="search">
-        <FilterInput inputValue={FilterInputValue} />
+        <FilterInput inputValue={filterInputValue} />
       </div>
 
       <div className="user">
