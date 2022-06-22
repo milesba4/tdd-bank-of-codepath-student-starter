@@ -14,7 +14,7 @@ export default function Navbar({FilterInputValue}) {
       <a className="logo">Logo</a>
 
       <div className="search">
-        <FilterInput />
+        <FilterInput inputValue={FilterInputValue} />
       </div>
 
       <div className="user">
