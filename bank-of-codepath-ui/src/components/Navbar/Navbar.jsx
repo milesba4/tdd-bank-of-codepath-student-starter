@@ -18,7 +18,7 @@ export default function Navbar({filterInputValue, setFilterInputValue}) {
       <a className="logo">Logo</a>
 
       <div className="search">
-        <FilterInput inputValue={filterInputValue} />
+        <FilterInput inputValue={filterInputValue} handleOnChange = {handleOnInputChange} />
       </div>
 
       <div className="user">
