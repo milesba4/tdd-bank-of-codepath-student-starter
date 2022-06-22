@@ -39,9 +39,19 @@ export default function Home({transactions,setTransactions,transfers,setTransfer
   }, []);
 
   console.log(transactions) // checking transactions
+
+  let filteredTransactions =[]
+
+  function filterTransactions(transactions){
+    if(filterInputValue!=""){
+      return ((transactions || []).filter((e)=>e.description.toLowerCase().includes(filterInputValue.toLowerCase())))
+
+    }else{
     return transactions
+    }
   }
 
+filteredTransactions=filterTransactions(transactions)
 
 export default function Home() {
   return (
