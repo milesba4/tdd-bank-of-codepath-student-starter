@@ -6,6 +6,11 @@ import {BrowserRouter,Routes,Route} from "react-router-dom"
 import TransactionDetail from "../TransactionDetail/TransactionDetail"
 
 export default function App() {
+const [isLoading, setisLoading] = React.useState(false)
+const [transactions,setTransactions] = React.useState([])
+const [transfers, settransfers] = React.useState([])
+const [errors,seterrors] = React.useState("")
+const [filterInputValue, setfilterInputValue] = React.useState("")
   return (
     <div className="App">
       <Navbar />
