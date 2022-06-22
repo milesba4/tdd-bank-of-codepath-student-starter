@@ -17,6 +17,9 @@ const [filterInputValue, setfilterInputValue] = React.useState("")
       <Routes>
       </Routes>
       <Navbar />
+      <main><Home/></main>
+      
+    
       <Home />
       </BrowserRouter>
     </div>
