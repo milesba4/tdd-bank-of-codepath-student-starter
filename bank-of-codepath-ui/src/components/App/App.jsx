@@ -13,8 +13,10 @@ const [errors,seterrors] = React.useState("")
 const [filterInputValue, setfilterInputValue] = React.useState("")
   return (
     <div className="App">
+      <BrowserRouter>
       <Navbar />
       <Home />
+      </BrowserRouter>
     </div>
   )
 }
