@@ -10,7 +10,7 @@ export default function Navbar({}) {
   
 
     <nav className="navbar">
-      <Logo/>
+      <Logo path = "/" />
       <a className="logo">Logo</a>
 
       <div className="search">
