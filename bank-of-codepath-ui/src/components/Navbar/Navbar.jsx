@@ -5,7 +5,7 @@ import avatar from "../../assets/avatar.png"
 import { Link } from "react-router-dom";
 import "./Navbar.css"
 
-export default function Navbar({}) {
+export default function Navbar({FilterInputValue}) {
   return (
   
 

@@ -18,7 +18,7 @@ const [filterInputValue, setfilterInputValue] = React.useState("")
         <Route path="/" element = {<Home/>} />
         <Route path ="/tansactions/:transactionId" element = {<TransactionDetail/>}/>
       </Routes>
-      <Navbar />
+      <Navbar filterInputValue={filterInputValue}/>
       <main><Home/></main>
       
     
