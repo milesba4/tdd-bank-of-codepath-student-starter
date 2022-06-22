@@ -12,7 +12,7 @@ const [transfers, settransfers] = React.useState([])
 const [errors,seterrors] = React.useState("")
 const [filterInputValue, setfilterInputValue] = React.useState("")
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
       <Navbar />
       <Home />
