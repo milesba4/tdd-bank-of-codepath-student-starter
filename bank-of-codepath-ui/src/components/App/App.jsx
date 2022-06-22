@@ -8,21 +8,20 @@ import TransactionDetail from "../TransactionDetail/TransactionDetail"
 export default function App() {
 const [isLoading, setisLoading] = React.useState(false)
 const [transactions,setTransactions] = React.useState([])
-const [transfers, settransfers] = React.useState([])
+const [transfers, setTransfers] = React.useState([])
 const [errors,seterrors] = React.useState("")
 const [filterInputValue, setFilterInputValue] = React.useState("")
   return (
     <div className="app">
       <BrowserRouter>
+      <main>
       <Routes>
-        <Route path="/" element = {<Home/>} />
-        <Route path ="/tansactions/:transactionId" element = {<TransactionDetail/>}/>
+        <Route path="/" element = {<Home error={errors} setError={seterrors} transactions = {transactions} setTransfers = {setTransfers} settransactions = {setTransactions}/>} />
+        <Route path ="/transactions/:transactionId" element = {<TransactionDetail/>}/>
       </Routes>
       <Navbar filterInputValue={filterInputValue} setFilterInputValue={setFilterInputValue}/>
-      <main><Home/></main>
-      
+      </main>
     
-      <Home />
       </BrowserRouter>
     </div>
   )
