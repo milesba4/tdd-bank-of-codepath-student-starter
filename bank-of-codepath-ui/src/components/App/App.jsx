@@ -9,7 +9,7 @@ export default function App() {
 const [isLoading, setisLoading] = React.useState(false)
 const [transactions,setTransactions] = React.useState([])
 const [transfers, setTransfers] = React.useState([])
-const [errors,seterrors] = React.useState("")
+const [errors,seterrors] = React.useState(null)
 const [filterInputValue, setFilterInputValue] = React.useState("")
 const [newTransactionForm, setNewTransactionForm] = React.useState({category:"", description:"", amount:""})
 const [isCreating,setIsCreating] = React.useState(false)
@@ -28,7 +28,8 @@ const [isCreating,setIsCreating] = React.useState(false)
       newTransactionForm = {newTransactionForm} 
       isCreating = {isCreating} 
       setIsCreating = {setIsCreating} 
-      error={errors} setError={seterrors} 
+      error={errors} 
+      setError={seterrors} 
       transactions = {transactions} 
       setTransfers = {setTransfers} 
       setTransactions = {setTransactions}
