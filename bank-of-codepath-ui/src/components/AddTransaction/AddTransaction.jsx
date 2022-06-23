@@ -25,7 +25,6 @@ export function AddTransactionForm({form,handleOnSubmit,handleOnFormFieldChange,
       <div className="fields">
         <div className="field">
           <label>Description</label>
-          <input />
           <input name = "description" type="text" value = {form?.description} onChange={handleOnFormFieldChange}/>
          
         </div>
