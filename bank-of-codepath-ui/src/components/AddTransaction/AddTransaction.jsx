@@ -2,6 +2,15 @@ import * as React from "react"
 import "./AddTransaction.css"
 
 export default function AddTransaction({setForm,form,isCreating, setIsCreating}) {
+  let handleOnFormFieldChange = (evt) => {
+    const {name, value} = evt.target
+    
+      setForm(current =>  ({
+        ...current, [name]:value
+      }))
+    
+  }
+console.log("form=", form)
   return (
     <div className="add-transaction">
       <h2>Add Transaction</h2>
