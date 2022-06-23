@@ -1,7 +1,7 @@
 import * as React from "react"
 import "./AddTransaction.css"
 
-export default function AddTransaction() {
+export default function AddTransaction({setForm,form,isCreating, setIsCreating}) {
   return (
     <div className="add-transaction">
       <h2>Add Transaction</h2>
