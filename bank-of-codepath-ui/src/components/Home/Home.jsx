@@ -13,6 +13,10 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
       const response = await axios.get('http://localhost:3001/bank/transactions')
       setTransactions(response)
       console.log("response1=", response)
+      if(response?.data?.transactions){
+        setTransactions(response.data.transactions)}
+      console.log("response1=", response.data.transactions)
+      console.log("transactions1",transactions)
     }
     catch (error){
       setError(error)
