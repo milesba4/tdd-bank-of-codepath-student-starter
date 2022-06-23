@@ -28,15 +28,15 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
     setIsLoading(true);
     try{
       const response = await axios.get('http://localhost:3001/bank/transfers')
-      setTransfers(response.data.transfers)
-      console.log("response2=", response)
-      console.log("transactions1",transactions)
+      if(response?.data?.transfers){
+        setTransfers(response.data.transfers)}
+      console.log("tranfers1",response.data.transfers)
     }
     catch (error){
       setError(error)
       console.log("error2=", error)
     }
-    setIsLoading(true);
+    setIsLoading(false);
 
   }, []);
 
@@ -81,7 +81,7 @@ console.log("transactions2=",filteredTransactions) // logging filteredTransactio
     <div className="home">
       <AddTransaction handleOnSubmit={handleOnSubmitNewTransaction} setForm = {setNewTransactionForm} form = {newTransactionForm} isCreating={isCreating} setIsCreating = {setIsCreating}/>
       {error?null:<h2 className="error"> Error</h2>}
-      {isLoading? <h1 className="loading-text"> Loading...</h1>:  <BankActivity transactions ={filteredTransactions}/> }
+      {isLoading? <h1 className="loading-text"> Loading...</h1>:<BankActivity transactions ={filteredTransactions}/> }
      
     </div>
 
