@@ -13,7 +13,7 @@ export default function BankActivity({transactions, transfers}) {
           <span className="col x2">Amount</span>
           <span className="col x15">Date</span>
         </div>
-        {transactions.map((transaction)=>
+        {transactions?.map((transaction)=>
         <TransactionRow transaction = {transaction} />
         )}
         
@@ -27,7 +27,7 @@ export default function BankActivity({transactions, transfers}) {
           <span className="col x2">Amount</span>
           <span className="col x15">Date</span>
         </div>
-        {transfers.map((transfer)=>
+        {transfers?.map((transfer)=>
         <TransferRow transfer = {transfer} />
         )}
       </div>
