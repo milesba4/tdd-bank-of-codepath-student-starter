@@ -42,6 +42,8 @@ export default function TransactionDetail() {
 }
 
 export function TransactionCard({ transaction = {}, transactionId = null }) {
+export function TransactionCard({ transaction , transactionId ,setIsLoading, isLoading,setHasFetched, hasFetched}) {
+
   return (
     <div className="transaction-card card">
       <div className="card-header">
