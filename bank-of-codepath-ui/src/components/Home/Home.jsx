@@ -62,8 +62,8 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
 
   return (
     <div className="home">
-      <AddTransaction/>
-      {isLoading? <h1 className="loading-text"> ...loading</h1>:  <BankActivity transactions ={filteredTransactions}/> }
+      <AddTransaction handleOnSubmit={handleOnSubmitNewTransaction} setForm = {setNewTransactionForm} form = {newTransactionForm} isCreating={isCreating} setIsCreating = {setIsCreating}/>
+      {isLoading? <h1 className="loading-text"> Loading...</h1>:  <BankActivity transactions ={filteredTransactions}/> }
 
     </div>
 
