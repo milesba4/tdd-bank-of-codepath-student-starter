@@ -11,16 +11,33 @@ const [transactions,setTransactions] = React.useState([])
 const [transfers, setTransfers] = React.useState([])
 const [errors,seterrors] = React.useState("")
 const [filterInputValue, setFilterInputValue] = React.useState("")
+const [newTransactionForm, setNewTransactionForm] = React.useState({category:"", description:"", amount:""})
+const [isCreating,setIsCreating] = React.useState(false)
   return (
     <div className="app">
       <BrowserRouter>
       <main>
+      </main>
       <Routes>
-        <Route path="/" element = {<Home error={errors} setError={seterrors} transactions = {transactions} setTransfers = {setTransfers} settransactions = {setTransactions}/>} />
+      <Route path="/" element = {<Home 
+      filterInputValue={filterInputValue} 
+      isLoading={isLoading}
+      setIsLoading = {setisLoading} 
+      transfers = {transfers} 
+      setNewTransactionForm={setNewTransactionForm} 
+      newTransactionForm = {newTransactionForm} 
+      isCreating = {isCreating} 
+      setIsCreating = {setIsCreating} 
+      error={errors} setError={seterrors} 
+      transactions = {transactions} 
+      setTransfers = {setTransfers} 
+      setTransactions = {setTransactions}
+
+      />} />
         <Route path ="/transactions/:transactionId" element = {<TransactionDetail/>}/>
       </Routes>
       <Navbar filterInputValue={filterInputValue} setFilterInputValue={setFilterInputValue}/>
-      </main>
+      
     
       </BrowserRouter>
     </div>

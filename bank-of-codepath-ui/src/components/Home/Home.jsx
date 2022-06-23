@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import axios from "axios"
 
 
-export default function Home({transactions,setTransactions,transfers,setTransfers,error,setError,isLoading,setIsLoading,filterInputValue}) {
+export default function Home({setNewTransactionForm, newTransactionForm,isCreating, setIsCreating, transactions,setTransactions,transfers,setTransfers,error,setError,isLoading,setIsLoading,filterInputValue}) {
    useEffect(async() => {
     setIsLoading(true);
     try{
@@ -51,7 +51,6 @@ export default function Home({transactions,setTransactions,transfers,setTransfer
     }
   }
 
-filteredTransactions=filterTransactions(transactions)
 
   return (
     <div className="home">
