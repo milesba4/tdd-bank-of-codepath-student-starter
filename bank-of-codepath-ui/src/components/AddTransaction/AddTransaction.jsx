@@ -36,7 +36,7 @@ export function AddTransactionForm({form,handleOnSubmit,handleOnFormFieldChange,
           <input name = "amount" type="number" value = {form?.amount} onChange={handleOnFormFieldChange}/>
         </div>
 
-        <button className="add-transaction" onClick={()=>{handleOnSubmit}} type="submit">
+        <button className="add-transaction" onClick={()=>{handleOnSubmit()}} type="submit">
           Add
         </button>
       </div>
