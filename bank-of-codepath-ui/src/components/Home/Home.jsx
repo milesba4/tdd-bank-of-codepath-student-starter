@@ -67,10 +67,13 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
     setError(error)
     setIsCreating(false)
   }
+  setNewTransactionForm({category:"",name:"", amount:0})
+  setIsCreating(false)
   }
 
   function handleOnSubmitNewTransaction(){
     handleOnCreateTransaction()
+   handleOnCreateTransaction()
 
   }
   console.log("error",error)
@@ -81,7 +84,7 @@ console.log("transactions2=",filteredTransactions) // logging filteredTransactio
     <div className="home">
       <AddTransaction handleOnSubmit={handleOnSubmitNewTransaction} setForm = {setNewTransactionForm} form = {newTransactionForm} isCreating={isCreating} setIsCreating = {setIsCreating}/>
       {error?null:<h2 className="error"> Error</h2>}
-      {isLoading? <h1 className="loading-text"> Loading...</h1>:<BankActivity transactions ={filteredTransactions}/> }
+      {isLoading? <h1 className="loading-text"> Loading...</h1>:<BankActivity transactions ={filteredTransactions} transfers={transfers}/> }
      
     </div>
 
