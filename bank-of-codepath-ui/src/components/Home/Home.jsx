@@ -74,6 +74,13 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
   }
   }
 
+  function handleOnSubmitNewTransaction(){
+    handleOnCreateTransaction()
+
+  }
+
+filteredTransactions=filterTransactions(transactions)
+console.log("transactions2=",filteredTransactions) // logging filteredTransactions
   return (
     <div className="home">
       <AddTransaction handleOnSubmit={handleOnSubmitNewTransaction} setForm = {setNewTransactionForm} form = {newTransactionForm} isCreating={isCreating} setIsCreating = {setIsCreating}/>
