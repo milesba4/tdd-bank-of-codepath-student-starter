@@ -11,8 +11,6 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
     setIsLoading(true);
     try{
       const response = await axios.get('http://localhost:3001/bank/transactions')
-      setTransactions(response)
-      console.log("response1=", response)
       if(response?.data?.transactions){
         setTransactions(response.data.transactions)}
       console.log("response1=", response.data.transactions)
@@ -32,7 +30,6 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
       const response = await axios.get('http://localhost:3001/bank/transfers')
       setTransfers(response.data.transfers)
       console.log("response2=", response)
-      
       console.log("transactions1",transactions)
     }
     catch (error){
@@ -40,11 +37,9 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
       console.log("error2=", error)
     }
     setIsLoading(true);
-  
 
   }, []);
 
-  console.log(transactions) // checking transactions
   console.log("trans=",transactions) // checking transactions
 
   let filteredTransactions =[]
