@@ -3,6 +3,7 @@ import { formatDate, formatAmount } from "../../utils/format"
 import "./BankActivity.css"
 
 export default function BankActivity() {
+export default function BankActivity({transactions, transfers}) {
   return (
     <div className="bank-activity">
       <h2>Transactions</h2>
@@ -44,7 +45,7 @@ export function TransactionRow({ transaction = {} }) {
   )
 }
 
-export function TransferRow({ transfer = {} }) {
+export function TransferRow({ transfer = {transfer} }) {
   return (
     <div className="table-row transfer-row">
       <span className="col x4">
