@@ -56,12 +56,12 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
 
 
   async function handleOnCreateTransaction(){
-  isCreating = true;
+  setIsCreating(true)
   try{
   const response = await axios.post('http://localhost:3001/bank/transactions',{
     transaction:newTransactionForm
   })
-  setNewTransactionForm(current=>[...current, response.data.transaction])
+  setTransactions(current=>[...current, response.data.transaction])
   }
   catch(error){
     setError(error)
