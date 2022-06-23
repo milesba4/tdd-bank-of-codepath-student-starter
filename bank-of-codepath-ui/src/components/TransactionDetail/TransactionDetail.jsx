@@ -34,10 +34,11 @@ export default function TransactionDetail() {
     fetchTransactionById()
     }, [transactionId]);
 
+    console.log("transactionId=", transactionId)
 
   return (
     <div className="transaction-detail">
-      <TransactionCard />
+      <TransactionCard transaction={transaction} setIsLoading={setIsLoading} transactionId = {transactionId} isLoading={isLoading} setHasFetched={setHasFetched} hasFetched={hasFetched}/>
     </div>
   )
 }
