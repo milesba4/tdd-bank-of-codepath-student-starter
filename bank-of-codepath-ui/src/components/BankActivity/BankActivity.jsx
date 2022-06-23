@@ -15,6 +15,10 @@ export default function BankActivity({transactions, transfers}) {
           <span className="col x15">Date</span>
         </div>
         {/* */}
+        {transactions.map((transaction)=>
+        <TransactionRow transaction = {transaction} />
+        )}
+        
       </div>
 
       <h2>Transfers</h2>
