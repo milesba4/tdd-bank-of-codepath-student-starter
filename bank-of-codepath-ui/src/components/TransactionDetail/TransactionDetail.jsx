@@ -41,18 +41,18 @@ export default function TransactionDetail() {
   )
 }
 
-export function TransactionCard({ transaction = {}, transactionId = null }) {
 export function TransactionCard({ transaction , transactionId ,setIsLoading, isLoading,setHasFetched, hasFetched}) {
 
   return (
     <div className="transaction-card card">
       <div className="card-header">
         <h3>Transaction #{transactionId}</h3>
-        <p className="category"></p>
+        {(Object.keys(transaction).length === 0) ? <h1>Not Found</h1> : null}
+        <p className="category">{transaction.category}</p>
       </div>
 
       <div className="card-content">
-        <p className="description"></p>
+        <p className="description">{transaction.description}</p>
       </div>
 
       <div className="card-footer">
