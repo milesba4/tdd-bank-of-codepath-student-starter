@@ -73,14 +73,16 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
     handleOnCreateTransaction()
 
   }
+  console.log("error",error)
 
 filteredTransactions=filterTransactions(transactions)
 console.log("transactions2=",filteredTransactions) // logging filteredTransactions
   return (
     <div className="home">
       <AddTransaction handleOnSubmit={handleOnSubmitNewTransaction} setForm = {setNewTransactionForm} form = {newTransactionForm} isCreating={isCreating} setIsCreating = {setIsCreating}/>
+      {error?null:<h2 className="error"> Error</h2>}
       {isLoading? <h1 className="loading-text"> Loading...</h1>:  <BankActivity transactions ={filteredTransactions}/> }
-
+     
     </div>
 
   
