@@ -18,22 +18,20 @@ export default function TransactionDetail() {
       setIsLoading(true);
       setHasFetched(false);
       try{
-        const response = await axios.get('http://localhost:3001/bank/transactions/:transactionId')
         const response = await axios.get('http://localhost:3001/bank/transactions/'+ transactionId)
-        if(response?.data?.transactions){
-          setTransaction(response.data.transactions)}
-        console.log("fetchresponse1=", response.data.transactions)
+        if(response?.data?.transaction){
+          setTransaction(response.data.transaction)}
+        console.log("fetchresponse1=", response)
       }
       catch (error){
         setError(error)
         console.log("fetcherror=", error)
       }
       setIsLoading(false);
-      setHasFetched(false);
+      setHasFetched(true);
     }
     fetchTransactionById()
     }, [transactionId]);
-
     console.log("transactionId=", transactionId)
 
   return (
