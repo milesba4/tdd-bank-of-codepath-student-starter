@@ -15,13 +15,11 @@ console.log("form=", form)
     <div className="add-transaction">
       <h2>Add Transaction</h2>
 
-      <AddTransactionForm />
       <AddTransactionForm form={form} setIsCreating = {setIsCreating} handleOnFormFieldChange = {handleOnFormFieldChange}/>
     </div>
   )
-}
-
-export function AddTransactionForm() {
+  }
+export function AddTransactionForm({form,handleOnSubmit,handleOnFormFieldChange, isCreating,setIsCreating }) {
   return (
     <div className="form">
       <div className="fields">
