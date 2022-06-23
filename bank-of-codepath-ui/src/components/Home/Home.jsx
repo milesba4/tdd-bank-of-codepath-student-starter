@@ -29,6 +29,7 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
       setTransfers(response.data.transfers)
       console.log("response2=", response)
       
+      console.log("transactions1",transactions)
     }
     catch (error){
       setError(error)
@@ -36,14 +37,17 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
     }
     setIsLoading(true);
   
+
   }, []);
 
   console.log(transactions) // checking transactions
+  console.log("trans=",transactions) // checking transactions
 
   let filteredTransactions =[]
 
   function filterTransactions(transactions){
     if(filterInputValue!=""){
+      console.log("transaction check=",transactions)
       return ((transactions || []).filter((e)=>e.description.toLowerCase().includes(filterInputValue.toLowerCase())))
 
     }else{
