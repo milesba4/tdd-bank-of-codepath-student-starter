@@ -16,6 +16,7 @@ console.log("form=", form)
       <h2>Add Transaction</h2>
 
       <AddTransactionForm />
+      <AddTransactionForm form={form} setIsCreating = {setIsCreating} handleOnFormFieldChange = {handleOnFormFieldChange}/>
     </div>
   )
 }
