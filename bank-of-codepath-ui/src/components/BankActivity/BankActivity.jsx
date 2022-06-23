@@ -1,7 +1,7 @@
 import * as React from "react"
 import { formatDate, formatAmount } from "../../utils/format"
 import "./BankActivity.css"
-
+import {Link} from "react-router-dom"
 export default function BankActivity({transactions, transfers}) {
   return (
     <div className="bank-activity">
