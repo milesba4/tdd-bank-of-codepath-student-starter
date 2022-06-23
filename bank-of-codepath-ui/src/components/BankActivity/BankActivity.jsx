@@ -37,6 +37,7 @@ export default function BankActivity({transactions, transfers}) {
 
 export function TransactionRow({ transaction = {transaction} }) {
   return (
+    <Link to = {"/transactions/" + transaction.id }>
     <div className="table-row transaction-row">
       <span className="col x4">
         <Arrow amount={transaction.amount} />
@@ -46,6 +47,7 @@ export function TransactionRow({ transaction = {transaction} }) {
       <span className="col x2">{formatAmount(transaction.amount)}</span>
       <span className="col x15">{formatDate(transaction.postedAt)}</span>
     </div>
+    </Link>
   )
 }
 
