@@ -1,13 +1,13 @@
 import * as React from "react"
 import { formatAmount, formatDate } from "../../utils/format"
 import "./TransactionDetail.css"
-//import {useParams} from "react-router-dom"
+import {useParams} from "react-router-dom"
 export default function TransactionDetail() {
   const[hasFetched,setHasFetched]=React.useState(false)
   const[transaction,setTransaction]=React.useState({})
   const[isLoading,setIsLoading]=React.useState(false)
-  const[error,setError]=React.useState(false)
-
+  const[error,setError]=React.useState("")
+  let {transactionId}=useParams();
   return (
     <div className="transaction-detail">
       <TransactionCard />
