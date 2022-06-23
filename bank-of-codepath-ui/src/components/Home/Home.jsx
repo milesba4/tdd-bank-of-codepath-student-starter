@@ -72,7 +72,6 @@ export default function Home({setNewTransactionForm, newTransactionForm,isCreati
   }
 
   function handleOnSubmitNewTransaction(){
-    handleOnCreateTransaction()
    handleOnCreateTransaction()
 
   }
