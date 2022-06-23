@@ -3,6 +3,7 @@ import { formatAmount, formatDate } from "../../utils/format"
 import "./TransactionDetail.css"
 import {useParams} from "react-router-dom"
 import { useEffect } from 'react';
+import axios from "axios"
 
 export default function TransactionDetail() {
   const[hasFetched,setHasFetched]=React.useState(false)
@@ -18,6 +19,7 @@ export default function TransactionDetail() {
       setHasFetched(false);
       try{
         const response = await axios.get('http://localhost:3001/bank/transactions/:transactionId')
+        const response = await axios.get('http://localhost:3001/bank/transactions/'+ transactionId)
         if(response?.data?.transactions){
           setTransaction(response.data.transactions)}
         console.log("fetchresponse1=", response.data.transactions)
