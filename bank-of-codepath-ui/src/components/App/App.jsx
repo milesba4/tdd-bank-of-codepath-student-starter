@@ -17,6 +17,7 @@ const [isCreating,setIsCreating] = React.useState(false)
     <div className="app">
       <BrowserRouter>
       <main>
+      <Navbar filterInputValue={filterInputValue} setFilterInputValue={setFilterInputValue}/>
       </main>
       <Routes>
       <Route path="/" element = {<Home 
@@ -37,7 +38,7 @@ const [isCreating,setIsCreating] = React.useState(false)
       />} />
         <Route path ="/transactions/:transactionId" element = {<TransactionDetail/>}/>
       </Routes>
-      <Navbar filterInputValue={filterInputValue} setFilterInputValue={setFilterInputValue}/>
+      
       
     
       </BrowserRouter>
