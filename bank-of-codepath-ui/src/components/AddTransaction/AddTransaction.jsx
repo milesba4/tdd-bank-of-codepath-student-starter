@@ -26,17 +26,19 @@ export function AddTransactionForm({form,handleOnSubmit,handleOnFormFieldChange,
         <div className="field">
           <label>Description</label>
           <input />
+          <input name = "description" type="text" value = {form?.description} onChange={handleOnFormFieldChange}/>
+         
         </div>
         <div className="field">
           <label>Category</label>
-          <input />
+          <input name = "category" type = "text" value = {form?.category} onChange={handleOnFormFieldChange} />
         </div>
         <div className="field half-flex">
           <label>Amount (cents)</label>
-          <input />
+          <input name = "amounts" type="number" value = {form?.amount} onChange={handleOnFormFieldChange}/>
         </div>
 
-        <button className="btn add-transaction" type="submit">
+        <button className="add-transaction" onClick={()=>{handleOnSubmit}} type="submit">
           Add
         </button>
       </div>
