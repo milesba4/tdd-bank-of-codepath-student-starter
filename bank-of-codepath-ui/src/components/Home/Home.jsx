@@ -82,7 +82,7 @@ console.log("transactions2=",filteredTransactions) // logging filteredTransactio
   return (
     <div className="home">
       <AddTransaction handleOnSubmit={handleOnSubmitNewTransaction} setForm = {setNewTransactionForm} form = {newTransactionForm} isCreating={isCreating} setIsCreating = {setIsCreating}/>
-      {error?null:<h2 className="error"> Error</h2>}
+      {error ? <h2 className="error">{error}</h2> : null}
       {isLoading? <h1 className="loading-text"> Loading...</h1>:<BankActivity transactions ={filteredTransactions} transfers={transfers}/> }
      
     </div>
